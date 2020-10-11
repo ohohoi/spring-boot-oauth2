@@ -11,16 +11,6 @@
     <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/webjars/js-cookie/js.cookie.js"></script>
-    <script type="text/javascript">
-        const logout = function() {
-            $.post("/logout", function() {
-                $("#user").html('');
-                $(".unauthenticated").show();
-                $(".authenticated").hide();
-            })
-            return true;
-        }
-    </script>
 </head>
 <body>
     <div class="container unauthenticated">
@@ -53,6 +43,15 @@
                 }
             }
         });
+
+        const logout = function() {
+            $.post("/logout", function() {
+                $("#user").html('');
+                $(".unauthenticated").show();
+                $(".authenticated").hide();
+            })
+            return true;
+        }
     </script>
 </body>
 </html>
