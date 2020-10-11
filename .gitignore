@@ -32,3 +32,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### Git Client Id, Secret ###
+src/main/resources/application.yml
